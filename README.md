@@ -74,7 +74,7 @@
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/angelobracero/serbeastapp
-   cd serbeast
+   cd SerbeastApp
    ```
 2. **Set up the Frontend**:
 
