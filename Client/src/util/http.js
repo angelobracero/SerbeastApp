@@ -1,5 +1,4 @@
-const BASE_URL = "https://serbeast.azurewebsites.net/api";
-// const BASE_URL = "https://localhost:7134/api";sqwqwq
+const BASE_URL = "https://localhost:5001/api";
 
 ///
 /// PROFESSIONALS

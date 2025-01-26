@@ -48,7 +48,6 @@ builder.Services.AddAuthentication(u =>
 builder.Services.AddCors();
 
 builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(options =>
 {
@@ -81,6 +80,8 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
+builder.WebHost.UseUrls("https://localhost:5001");
+
 var app = builder.Build();
 
 app.UseForwardedHeaders(new ForwardedHeadersOptions
@@ -88,16 +89,13 @@ app.UseForwardedHeaders(new ForwardedHeadersOptions
     ForwardedHeaders = ForwardedHeaders.XForwardedProto
 });
 
-app.UseHttpsRedirection();  // Ensure HTTPS Redirection works
-app.UseSwagger();            // Always enable Swagger UI
-app.UseSwaggerUI();
-
-//// Configure the HTTP request pipeline.
-//if (app.Environment.IsDevelopment())
-//{
-//    app.UseSwagger();
-//    app.UseSwaggerUI();
-//}
+app.UseHttpsRedirection();  
+app.UseSwagger();           
+app.UseSwaggerUI(c =>
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    c.RoutePrefix = string.Empty;  // This makes Swagger UI appear at the root URL
+});
 
 app.UseHttpsRedirection();
 

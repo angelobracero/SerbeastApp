@@ -73,14 +73,14 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/angelobracero/serbeast.git
+   git clone https://github.com/angelobracero/serbeastapp
    cd serbeast
    ```
 2. **Set up the Frontend**:
 
-   - Navigate to the `frontend` directory:
+   - Navigate to the `Client` directory:
      ```bash
-     cd frontend
+     cd Client
      ```
    - Install dependencies:
      ```bash
@@ -92,14 +92,14 @@
      ```
    - Access the app at:
      ```plaintext
-     http://localhost:3000
+     http://localhost:5000
      ```
 
 3. **Set up the Backend**:
 
    - Navigate to the `backend` directory:
      ```bash
-     cd ../backend/SerBeast.API
+     cd ../Api
      ```
    - Install dependencies:
      ```bash
@@ -116,8 +116,5 @@
      ```
    - Access the API at:
      ```plaintext
-     http://localhost:5000
+     http://localhost:5001
      ```
-
-4. **Verify Frontend-Backend Communication**:
-   - Ensure the `.env` file in the `frontend` directory has the correct API base URL to connect to the backend.
