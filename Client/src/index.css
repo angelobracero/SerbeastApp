@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .grid-cols-custom {
+    grid-template-columns: 1fr 50px 1fr 50px 1fr;
+  }
+
+  .grid-cols-footer {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
+
+body {
+  @apply bg-richblue;
+}
+
+.option {
+  @apply bg-lightblue;
+}
+
+.option:hover {
+  background-color: red;
+}
+
+/**!------------------------ SCROLLBAR ------------------------*/
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f2f1f1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 167, 245);
+  width: 5px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: black;
+}
+
+/* styles.css or your custom CSS file */
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
